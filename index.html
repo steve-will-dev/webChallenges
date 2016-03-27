@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+    <title>Simple Form Validation Challenge</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    
+
+    <style>
+
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 1em;
+    }
+
+    #form {
+
+        width: 500px;
+        height: 255px;
+        background-color: red;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    input {
+        width: 300px;
+        height: 30px;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+
+    }
+
+    label {
+        font-size: 1.3em;
+        width: 185px;
+        float: left;
+        padding-top: 8px;
+    }
+
+    #submitButton {
+        height: 40px;
+        margin-left: 185px;
+        width: 315px;
+        background-color: green;
+    }
+
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+
+    #appendcontent{
+        width: 500px;
+        background-color: red;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #errorMessage{
+        width: 180px;
+        background-color: red;
+        padding: 10px;
+        padding-left: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: -10px;
+        display: none;
+    }
+     #successMessage{
+        width: 180px;
+        background-color: green;
+        padding: 10px;
+        padding-left: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: -10px;
+        display: none;
+    }
+
+    @media (max-width: 700px) {
+        body {
+            background-color: #fff;
+        }
+        div {
+            width: auto;
+            margin: 5em auto;
+            border-radius: 1em;
+            padding: 1em;
+        }
+    }
+    </style>
+   
+</head>
+
+<body>
+
+<div>
+    <h1>Simple Form Validation Challenge</h1>
+
+    <div id="appendcontent"></div>
+
+    <script>
+
+        $.ajax({
+            url:"test.html"
+        }).done(function(data){
+            $("#appendcontent").append(data);
+        });
+
+    </script>
+
+<div id="form">
+
+    <form id="validationForm">
+            
+
+            <label for"email">Email Address:</label>
+            <input type="text" id="email" />
+
+            <label for"phone">Telephone:</label>
+            <input type="text" id="phone" />
+
+            <label for"pass">Password:</label>
+            <input type="password" id="pass1" />
+
+            <label for"passconfirm">Password Confirm:</label>
+            <input type="password" id="pass2" />
+
+            <input id="submitButton" type="submit" value="Submit">
+
+    </form>
+
+<div id="errorMessage"></div>
+<div id="successMessage"></div>
+
+    </div>
+    <script>
+
+    $("#validationForm").submit(function(){
+
+
+        var errorMessage="";
+        var successMessage="Submitted Successfully";
+        
+        function isValidEmailAddress(emailAddress) {
+            var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+        return pattern.test(emailAddress);
+};
+
+            if (!isValidEmailAddress($("#email").val())) {
+                
+                errorMessage=errorMessage+"Invalid Email Address<br />"
+            }
+
+            if (!$.isNumeric($("#phone").val())) {
+                
+                errorMessage=errorMessage+"Invalid Phone Number<br />";
+            }
+
+            if ($("#pass1").val() != $("#pass2").val()) {
+                
+                errorMessage=errorMessage+"Error In Passwords<br />";
+            }
+
+            if (errorMessage=="") {
+
+                $("#successMessage").html(successMessage).css("display", "block");
+                $("#errorMessage").html(errorMessage).css("display", "none");
+
+            }
+
+            else {
+
+            $("#errorMessage").html(errorMessage).css("display", "block");
+        }
+
+            return false;
+
+    });
+
+</script> 
+
+</div>
+</body>
+</html>
