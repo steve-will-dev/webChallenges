@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+    <title>Jquery UI</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<style>
+body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        height: 1000px;
+        margin: 5em auto;
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 1em;
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    h1{
+        margin-left: 100px;
+    }
+    .ui-resizable-handle.ui-resizable-e {
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .ui-resizable-handle.ui-resizable-s {
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .ui-resizable-handle.ui-resizable-n {
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .ui-resizable-handle.ui-resizable-w {
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .ui-resizable-handle.ui-resizable-se.ui-icon.ui-icon-gripsmall-diagonal-se{
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .ui-resizable-handle.ui-resizable-nw{
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .ui-resizable-handle.ui-resizable-sw{
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .ui-resizable-handle.ui-resizable-ne{
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    #resizable{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: 0px;
+        font-weight: bold;
+    }
+    #draggable{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        font-weight: bold;
+        margin: 0px 0px 50px 0px;
+
+    }
+    #boxcontainer{
+        margin: 0;
+        padding-left: 150px;
+        background-color: transparent;
+        border-radius: 0px;
+    }
+
+    @media (max-width: 700px) {
+        body {
+            background-color: #fff;
+        }
+        div {
+            width: auto;
+            margin: 0 auto;
+            border-radius: 1em;
+            padding: 1em;
+        }
+        h1{
+        font-size: 1.1em;
+        margin-left: 155px;
+    }
+    </style> 
+ 
+</head>
+
+<body>
+<div>
+    <h1>Draggables & Resizables</h1>
+
+
+<div id="boxcontainer">
+    <div id="draggable">
+        Drag Me Around With Jquery
+    </div>
+
+    <div id="resizable">
+        Resize Me With Jquery
+    </div>  
+</div>
+  <script>
+    
+    $( "#draggable" ).draggable();
+
+    $( "#resizable" ).resizable({
+       handles:"n, e, s, w, ne, se, sw, nw"
+
+    });;
+
+  </script>
+
+</div>
+</body>
+</html>
