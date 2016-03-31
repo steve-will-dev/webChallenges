@@ -32,6 +32,7 @@
         margin-top: 5px;
         margin-right: 15px;
         border-color: red;
+
     }
     #wrapper{
         margin: 0px;
@@ -107,28 +108,34 @@
         height: 100%;
         border: none;
         border-right: 1px solid red;
-        font-family: monotype;
+        font-family: "Monospace", "Open Sans", "Helvetica Neue", Helvetica, Arial,;
         font-size: 110%;
         padding: 5px;
+        padding-top: 40px;
         box-sizing: border-box;
     }
     .codeLabel{
         position: absolute;
         right:10px;
         top:10px;
+        z-index: 1;
     }
     #CSSContainer, #JavascriptContainer{
         display: none;
     }
     #resultFrame{
         height: 100%;
+        width: 100%;
         position: relative;
-        left: 20px;
+        left: 0px;
         border:none;
+        z-index: 0;
+        padding-top: 40px;
     }
     .selected{
         color: #FF0000;
     }
+
     </style>
 
 
@@ -193,7 +200,7 @@
 
 <div class="codeContainer" id="OutputContainer">
 
-    <div class="codeLabel">Output</div>
+  <div class="codeLabel">Output</div>
 
 <iframe class="resultFrame" id="resultFrame">Test</iframe>
 
