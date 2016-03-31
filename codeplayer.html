@@ -71,8 +71,8 @@
     }
     #menubuttons{
         list-style: none;
-        padding: 0px 0px 0px 25%;
-        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 50%;
+        margin: 0px 0px 0px -256px;
     }
     #html{
         padding-right: 30px;
@@ -186,7 +186,7 @@
 
     <div class="codeLabel">HTML</div>
 
-<textarea id="htmlCode"><div id="test"></div></textarea>
+<textarea id="htmlCode">Code Goes Here</textarea>
 
 </div>
 
@@ -194,7 +194,7 @@
 
     <div class="codeLabel">CSS</div>
 
-<textarea id="cssCode">html {background-color:blue}</textarea>
+<textarea id="cssCode">Code Goes Here</textarea>
 
 </div>
 
@@ -202,7 +202,7 @@
 
     <div class="codeLabel">JS</div>
 
-<textarea id="jsCode">document.getElementById("test").innerHTML="its working"</textarea>
+<textarea id="jsCode">Disabled!</textarea>
 
 </div>
 
@@ -233,7 +233,6 @@
         $("#runButton").click(function(){
             $(".resultFrame").contents().find("html").html('<style>'+$("#cssCode").val()+'</style>'+$("#htmlCode").val());
 
-           document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
         })
 
 </script>
