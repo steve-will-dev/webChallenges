@@ -32,11 +32,19 @@
         margin-top: 5px;
         margin-right: 15px;
         border-color: red;
+        cursor: pointer;
 
     }
     #wrapper{
         margin: 0px;
         padding: 0px;
+    }
+
+@media only screen and (max-width: 940px){
+    #wrapper {
+        width: 940px;
+    }
+
     }
     #menubar{
         height:50px;
@@ -119,6 +127,7 @@
         right:10px;
         top:10px;
         z-index: 1;
+        font-weight: bold;
     }
     #CSSContainer, #JavascriptContainer{
         display: none;
@@ -135,7 +144,6 @@
     .selected{
         color: #FF0000;
     }
-
     </style>
 
 
