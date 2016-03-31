@@ -12,133 +12,123 @@
 
     <style>
     body{
-    	margin: 0px;
-    	padding: 0px;
+        margin: 0px;
+        padding: 0px;
     }
     p{
-    	margin: 0px;
-    	padding: 0px;
-    	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin: 0px;
+        padding: 0px;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     li{
-    	float: left;
-    	padding: 10px;
-    	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    	font-weight: bold;
-    	border-top: none;
-    	border-bottom: none;
-    	border-right: 3px solid;
-    	border-left: none;
-    	margin-top: 5px;
-    	margin-right: 15px;
-    	border-color: red;
-
+        float: left;
+        padding: 10px;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        border-top: none;
+        border-bottom: none;
+        border-right: 3px solid;
+        border-left: none;
+        margin-top: 5px;
+        margin-right: 15px;
+        border-color: red;
     }
     #wrapper{
-    	margin: 0px;
-    	padding: 0px;
+        margin: 0px;
+        padding: 0px;
     }
     #menubar{
-    	height:50px;
-    	width: 100%;
-    	background-color: #C6C6C6;
-    	margin: 0px;
-    	padding: 0px;
+        height:50px;
+        width: 100%;
+        background-color: #C6C6C6;
+        margin: 0px;
+        padding: 0px;
     }
     #logotext{
-    	padding: 14px;
-    	font-weight: bold;
-    	float: left;
+        padding: 14px;
+        font-weight: bold;
+        float: left;
     }
     #logo{
-    	float:left;
-    	padding-left: 12px;
-    	padding-right: 12px;
+        float:left;
+        padding-left: 12px;
+        padding-right: 12px;
     }
-   	.languageLogo{
-    	float:left;
-    	padding-left: 12px;
-    	padding-right: 0px;
-    	padding-top: 10px;
-
+    .languageLogo{
+        float:left;
+        padding-left: 12px;
+        padding-right: 0px;
+        padding-top: 10px;
     }
     #menubuttons{
-    	list-style: none;
-    	padding: 0px 0px 0px 25%;
-    	margin: 0px 0px 0px 0px;
+        list-style: none;
+        padding: 0px 0px 0px 25%;
+        margin: 0px 0px 0px 0px;
     }
     #html{
-    	padding-right: 30px;
-    	display: block;
+        padding-right: 30px;
+        display: block;
     }
     #css{
-    	padding-right: 30px;
-    	padding-left: 15px;
+        padding-right: 30px;
+        padding-left: 15px;
     }
     #javascript{
-    	padding-right: 30px;
-    	padding-left: 15px;
+        padding-right: 30px;
+        padding-left: 15px;
     }
-
     #output{
-    	padding-left: 15px;
-    	border-right: none;
+        padding-left: 15px;
+        border-right: none;
     }
     #buttonDiv{
-    	padding-top: 5px;
-    	padding-right: 10px;
-    	float: right;
+        padding-top: 5px;
+        padding-right: 10px;
+        float: right;
     }
     #runButton{
-    	width: 100px;
-    	height: 40px;
-    	border-radius: 5px;
-    	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    	font-weight: bold;
-    	background-color: #86CE3C;
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        background-color: #86CE3C;
     }
     .clear{
-    	clear:both;
+        clear:both;
     }
-
     .codeContainer{
-    	width: 50%;
-    	float:left;
-    	position: relative;
-
-
+        width: 50%;
+        float:left;
+        position: relative;
     }
-	.codeContainer textarea{
-		width: 100%;
-		height: 100%;
-		border: none;
-		border-right: 1px solid red;
-		font-family: monotype;
-		font-size: 110%;
-		padding: 5px;
-		box-sizing: border-box;
-	}
-
-	.codeLabel{
-		position: absolute;
-		right:10px;
-		top:10px;
-	}
-
-	#CSSContainer, #JavascriptContainer{
-		display: none;
-	}
-
-	iframe{
-		height: 100%;
-		position: relative;
-		left: 20px;
-		border:none;
-	}
-
-	.selected{
-		color: #FF0000;
-	}
+    .codeContainer textarea{
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-right: 1px solid red;
+        font-family: monotype;
+        font-size: 110%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .codeLabel{
+        position: absolute;
+        right:10px;
+        top:10px;
+    }
+    #CSSContainer, #JavascriptContainer{
+        display: none;
+    }
+    #resultFrame{
+        height: 100%;
+        position: relative;
+        left: 20px;
+        border:none;
+    }
+    .selected{
+        color: #FF0000;
+    }
     </style>
 
 
@@ -152,90 +142,84 @@
 
 <div id="wrapper">
 
-	<div id="menubar">
-		<img id="logo" src="images\codelogo.png" alt="Mountain View" style="width:50px;height:50px;">
+    <div id="menubar">
+        <img id="logo" src="images\codelogo.png" alt="Mountain View" style="width:50px;height:50px;">
 
-		<p id="logotext">Code Player</p>
+        <p id="logotext">Code Player</p>
 
-			<ul id="menubuttons">
-				<img class="languageLogo" src="images\HTML5_Logo_512.png" style="width:30px;height:30px;">
-				<li class="toggle selected" id="html">HTML</li>
-				<img class="languageLogo" src="images\CSS3_logo.png" style="width:20px;height:30px;">
-				<li class="toggle" id="css">CSS</li>
-				<img class="languageLogo" src="images\javascript_logo.png" style="width:20px;height:30px;">
-				<li class="toggle" id="javascript">Javascript</li>
-				<img class="languageLogo" src="images\output_logo.png" style="width:30px;height:30px;">
-				<li class="toggle selected" id="output">Output</li>
-			</ul>
+            <ul id="menubuttons">
+                <img class="languageLogo" src="images\HTML5_Logo_512.png" style="width:30px;height:30px;">
+                <li class="toggle selected" id="html">HTML</li>
+                <img class="languageLogo" src="images\CSS3_logo.png" style="width:20px;height:30px;">
+                <li class="toggle" id="css">CSS</li>
+                <img class="languageLogo" src="images\javascript_logo.png" style="width:20px;height:30px;">
+                <li class="toggle" id="javascript">Javascript</li>
+                <img class="languageLogo" src="images\output_logo.png" style="width:30px;height:30px;">
+                <li class="toggle selected" id="output">Output</li>
+            </ul>
 
-		<div id="buttonDiv">
-			<button id="runButton">RUN CODE</button>
-		</dvi>
+        <div id="buttonDiv">
+            <button id="runButton">RUN CODE</button>
+        </dvi>
 
-		</div>
-	</div>
+        </div>
+    </div>
 
 <div class="clear"></div>
 
 <div class="codeContainer" id="HTMLContainer">
 
-	<div class="codeLabel">HTML</div>
+    <div class="codeLabel">HTML</div>
 
-<textarea>Your Code Goes Here!</textarea>
+<textarea id="htmlCode"><div id="test"></div></textarea>
 
 </div>
 
 <div class="codeContainer" id="CSSContainer">
 
-	<div class="codeLabel">CSS</div>
+    <div class="codeLabel">CSS</div>
 
-<textarea>Your Code Goes Here!</textarea>
+<textarea id="cssCode">html {background-color:blue}</textarea>
 
 </div>
 
 <div class="codeContainer" id="JavascriptContainer">
 
-	<div class="codeLabel">JS</div>
+    <div class="codeLabel">JS</div>
 
-<textarea>Your Code Goes Here!</textarea>
+<textarea id="jsCode">document.getElementById("test").innerHTML="its working"</textarea>
 
 </div>
 
 <div class="codeContainer" id="OutputContainer">
 
-	<div class="codeLabel">Output</div>
+    <div class="codeLabel">Output</div>
 
-<iframe id="resultsFrame"></iframe>
+<iframe class="resultFrame" id="resultFrame">Test</iframe>
 
 </div>
 
 <script>
+    var windowHeight=$(window).height();
+    var menuBar=$("#menubar").height();
+    var codeContainerHeight=windowHeight-menuBar;
+        $(".codeContainer").height(codeContainerHeight+"px");
+        $(".toggle").click(function(){
+            $(this).toggleClass("selected");
+            var activeDiv=$(this).html();
+            $("#"+activeDiv+"Container").toggle();
+            var showingDivs=$(".codeContainer").filter(function(){
+                return($(this).css("display")!="none");
+            }).length;
+            var width=100/showingDivs;
+            $(".codeContainer").width(width+"%");
+        });
 
-	var windowHeight=$(window).height();
-	var	menuBar=$("#menubar").height();
-	var codeContainerHeight=windowHeight-menuBar;
+        $("#runButton").click(function(){
+            $(".resultFrame").contents().find("html").html('<style>'+$("#cssCode").val()+'</style>'+$("#htmlCode").val());
 
-		$(".codeContainer").height(codeContainerHeight+"px");
-
-		$(".toggle").click(function(){
-
-			$(this).toggleClass("selected");
-
-			var activeDiv=$(this).html();
-
-			$("#"+activeDiv+"Container").toggle();
-
-			var showingDivs=$(".codeContainer").filter(function(){
-
-				return($(this).css("display")!="none");
-
-			}).length;
-
-			var width=100/showingDivs;
-
-			$(".codeContainer").width(width+"%");
-
-		});
+           document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
+        })
 
 </script>
 
