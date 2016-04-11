@@ -22,7 +22,6 @@
     }
     li{
         float: left;
-        padding: 10px;
         font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-weight: bold;
         border-top: none;
@@ -30,9 +29,39 @@
         border-right: 3px solid;
         border-left: none;
         margin-top: 5px;
-        margin-right: 15px;
+        margin-right: 33px;
         border-color: red;
         cursor: pointer;
+
+    }
+
+    ul #html{
+background: url('images/HTML5_Logo_512.png') no-repeat left top;
+list-style: none;
+padding: 10px 33px 10px 40px;
+background-size: 40px 40px;
+
+}
+    ul #css{
+background: url('images/CSS3_logo.png') no-repeat left top;
+list-style: none;
+padding: 10px 33px 10px 35px;
+background-size: 30px 40px;
+
+}
+    ul #javascript{
+background: url('images/javascript_logo.png') no-repeat left top;
+list-style: none;
+padding: 10px 33px 10px 35px;
+background-size: 30px 40px;
+
+
+}
+    ul #output{
+background: url('images/output_logo.png') no-repeat left top;
+list-style: none;
+padding: 10px 33px 10px 45px;
+background-size: 40px 40px;
 
     }
     #wrapper{
@@ -40,9 +69,9 @@
         padding: 0px;
     }
 
-@media only screen and (max-width: 940px){
+@media only screen and (max-width: 990px){
     #wrapper {
-        width: 940px;
+        width: 990px;
     }
 
     }
@@ -70,13 +99,12 @@
         padding-top: 10px;
     }
     #menubuttons{
-        list-style: none;
-        padding: 0px 0px 0px 25%;
-        margin: 0px 0px 0px 0px;
+
+        padding: 0px 0px 0px 50%;
+        margin: 0px 0px 0px -256px;
     }
     #html{
         padding-right: 30px;
-        display: block;
     }
     #css{
         padding-right: 30px;
@@ -158,24 +186,24 @@
 <div id="wrapper">
 
     <div id="menubar">
-        <img id="logo" src="images\codelogo.png" alt="Mountain View" style="width:50px;height:50px;">
+        <img id="logo" src="images/codelogo.png" alt="Logo" style="width:50px;height:50px;">
 
         <p id="logotext">Code Player</p>
 
+
             <ul id="menubuttons">
-                <img class="languageLogo" src="images\HTML5_Logo_512.png" style="width:30px;height:30px;">
+                
                 <li class="toggle selected" id="html">HTML</li>
-                <img class="languageLogo" src="images\CSS3_logo.png" style="width:20px;height:30px;">
+                
                 <li class="toggle" id="css">CSS</li>
-                <img class="languageLogo" src="images\javascript_logo.png" style="width:20px;height:30px;">
+                
                 <li class="toggle" id="javascript">Javascript</li>
-                <img class="languageLogo" src="images\output_logo.png" style="width:30px;height:30px;">
+                
                 <li class="toggle selected" id="output">Output</li>
             </ul>
 
         <div id="buttonDiv">
             <button id="runButton">RUN CODE</button>
-        </dvi>
 
         </div>
     </div>
@@ -186,7 +214,7 @@
 
     <div class="codeLabel">HTML</div>
 
-<textarea id="htmlCode"><div id="test"></div></textarea>
+<textarea id="htmlCode">Code Goes Here</textarea>
 
 </div>
 
@@ -194,7 +222,7 @@
 
     <div class="codeLabel">CSS</div>
 
-<textarea id="cssCode">html {background-color:blue}</textarea>
+<textarea id="cssCode">Code Goes Here</textarea>
 
 </div>
 
@@ -202,7 +230,7 @@
 
     <div class="codeLabel">JS</div>
 
-<textarea id="jsCode">document.getElementById("test").innerHTML="its working"</textarea>
+<textarea id="jsCode">Disabled!</textarea>
 
 </div>
 
@@ -210,7 +238,7 @@
 
   <div class="codeLabel">Output</div>
 
-<iframe class="resultFrame" id="resultFrame">Test</iframe>
+<iframe class="resultFrame" id="resultFrame"></iframe>
 
 </div>
 
@@ -232,8 +260,7 @@
 
         $("#runButton").click(function(){
             $(".resultFrame").contents().find("html").html('<style>'+$("#cssCode").val()+'</style>'+$("#htmlCode").val());
-
-           document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
+            document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
         })
 
 </script>
