@@ -1,0 +1,461 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Steve's BBC</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+
+body{
+    margin: 0;
+}
+
+#topbar {
+    width: 100%;
+    height: 37px;
+    background-color: #FFFFFF;
+    font-family: Arial,Helvetica,freesans,sans-serif;
+    margin: 0px;
+}
+
+#logo {
+    height: 32px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+    border-right: 1px solid #CCCCCC;
+}
+
+#signin {
+    display: inline-block;
+    position: relative;
+    width: 160px;
+    height: 36px;
+    padding-top: 1px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 0.8em;
+    float: left;
+    border-right: 1px solid #CCCCCC;
+}
+#signin img {
+    position: relative;
+    top: 7px;
+}
+#menu {
+    position: relative;
+    float: left;
+    margin-bottom: -15px;
+}
+
+#menu ul {
+    margin-top: 0px;
+    padding: 0;
+    margin-left: 14px;
+}
+
+#menu li {
+    display: inline-block;
+    list-style: none;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 12px 15px 10px 15px;
+    border-right: 1px solid #CCCCCC;
+    margin-left: -5px;
+
+}
+
+#search {
+    padding-top: 6px;
+    padding-left: 10px;
+    float: left;
+}
+
+#search input {
+    height:23px;
+    background-image: url('image/search.png');
+    background-color: #E4E4E4;
+    background-repeat: no-repeat;
+    background-position: right center;
+    border: none;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+#newsbar {
+    width: 100%;
+    height: 55px;
+    background-color: #BB1919;
+    font-family: Arial,Helvetica,freesans,sans-serif;
+
+}
+
+.fixedwidth {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#newsheader {
+    font-size: 2.5em;
+    color: white;
+}   
+
+#newsbar p {
+    padding: 5px;
+    margin: 0;
+}
+
+#thirdbar {
+    width: 100%;
+    height: 40px;
+    background-color: #A91717;
+    font-family: Arial,Helvetica,freesans,sans-serif;
+    color: white;
+}
+
+#menu2 {
+    position: relative;
+    float: left;
+    margin-bottom: -40px;
+}
+
+#menu2 ul {
+    margin-top: 10px;
+    padding: 0;
+}
+
+#menu2 li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: inline;
+    padding: 1px 10px 1px 10px;
+    border-right: 1px solid #bb4545;
+}
+
+#forthbar {
+    width: 100%;
+    height: 40px;
+    background-color: #FFFFFF;
+    font-family: Arial,Helvetica,freesans,sans-serif;
+    color: #000000;
+    margin: 0px 0px 15px 0px;
+    padding: 0px;
+}
+
+#menu3 {
+    position: relative;
+    float: left;
+    margin-bottom: -10px;
+}
+
+#menu3 ul {
+    margin-top: 5px;
+    padding: 0;
+}
+
+#menu3 li {
+    list-style: none;
+    font-size: 0.8em;
+    display: inline;
+    padding: 1px 10px 1px 10px;
+    border-right: 1px solid #56545E;
+}
+
+.break {
+    clear: both;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #333333;
+}
+
+#menu li:hover.newslink {
+    border-top: none;  
+    border-bottom:5px solid #992211; 
+    padding-bottom: 5px;
+    width: inherit;
+}
+
+#menu li:hover.sportlink {
+    border-top: none;  
+    border-bottom:5px solid #FFEE11; 
+    padding-bottom: 5px;
+    width: inherit;
+}
+
+#menu li:hover.weatherlink {
+    border-top: none;  
+    border-bottom:5px solid #88CCEE; 
+    padding-bottom: 5px;
+    width: inherit;
+}
+#menu li:hover.iplayerlink {
+    border-top: none;  
+    border-bottom:5px solid #ed3d7d; 
+    padding-bottom: 5px;
+    width: inherit;
+}
+#menu li:hover.tvlink {
+    border-top: none;  
+    border-bottom:5px solid blue; 
+    padding-bottom: 5px;
+    width: inherit;
+}
+#menu li:hover.radiolink {
+    border-top: none;  
+    border-bottom:5px solid #262626; 
+    padding-bottom: 5px;
+    width: inherit;
+}
+#menu li:hover.morelink {
+    border-top: none;  
+    border-bottom:5px solid #90D200; 
+    padding-bottom: 5px;
+    width: inherit;
+}
+
+#signin a {
+    text-decoration: none;
+    color: #333333;
+}
+
+#signin:hover {
+    border-top: none;  
+    border-bottom:5px solid #992211; 
+    padding-bottom: 5px;
+    position: relative;
+    width: 160px;
+    height: 26px;
+    padding-top: 1px;
+    left: 0px;
+    padding-left: 10px;
+    padding-right: 0px; 
+    font-weight: bold;
+    font-size: 0.8em;
+    float: left;
+    border-right: 1px solid #CCCCCC;
+    margin-right: -10px;
+}
+
+#maincontent {
+    border-right: 1px solid #CCCCCC;
+    width: 670px;
+    height: 600px;
+    margin-right: 15px;
+    float: left;
+    margin-top: 20px;
+
+}
+
+#section1 { 
+    float: left;
+    width: 240px;
+    font-size: 0.9em;
+    padding: 0;
+    margin: 0;
+}
+
+#section1 p{
+    margin: 0;
+    padding-right: 10px;
+    line-height:1.5;
+}
+#section2{
+    float: right;
+    padding-right: 15px;
+}
+
+#headline h1{
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+#clock{
+    float: left;
+    margin-left: -6px;
+    margin-top: 10px;
+}
+
+#clock p{
+    font-size: 0.9em;
+    float: right;
+    padding-top: 1px;
+    border-right: 1px solid #CCCCCC;  
+    height: 20px;
+
+}
+
+.uklink a {
+    text-decoration: none;
+    color: #BB1919;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.uklink a:hover {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.uklink {
+    margin-top: 13px
+}
+
+.watchnow {
+    padding-top: 25px;
+    font-size: 1.5em;
+
+}
+#live{
+    float: left;
+    margin-top: 12px;
+    width: 300px;
+}
+#live p{
+    font-size: 0.7em;
+    margin-top: 2px;
+    width: 300px;
+}
+#live ul{
+    list-style: none;
+    float: left;
+    margin-top: 2px;
+    margin-left: -40px;
+}
+
+#live img{
+    float: left;
+    margin-right: 5px;
+}
+
+</style>    
+</head>
+
+<body>
+    <div id="container">
+        
+        <div id="topbar">
+
+            <div class="fixedwidth">
+                <div id="logo">
+                <img src = 'image/bbc_logo.png' alt="BBC Logo">
+                </div>
+                
+                <div id="signin">
+                <img src = 'image/sign_in_logo.png' alt="Sign in Logo"><a href="http://www.w3schools.com/html/">Sign In</a>
+                </div>
+                
+                <div id="menu">
+                    <ul>
+                        <li class="newslink"><a href="http://www.w3schools.com/html/">News</a></li>    
+                        <li class="sportlink"><a href="http://www.w3schools.com/html/">Sport</a></li> 
+                        <li class="weatherlink"><a href="http://www.w3schools.com/html/">Weather</a></li>
+                        <li class="iplayerlink"><a href="http://www.w3schools.com/html/">iPlayer</a></li>
+                        <li class="tvlink"><a href="http://www.w3schools.com/html/">TV</a></li>
+                        <li class="radiolink"><a href="http://www.w3schools.com/html/">Radio</a></li>
+                        <li class="morelink"><a href="http://www.w3schools.com/html/">More</a></li>
+                    </ul>
+                </div>
+            
+                <div id="search">
+
+                    <input type="text" placeholder="Search" />
+
+                </div>
+            </div>
+        </div>
+
+    <div class="break"></div>
+
+    <div id="newsbar">
+
+            <div class="fixedwidth">     
+                <p id="newsheader">NEWS</p> 
+            </div>
+    </div>
+
+
+    <div class="break"></div>
+
+    <div id="thirdbar">
+
+            <div class="fixedwidth">
+
+            <div id="menu2">
+                    <ul>
+                        <li>Home</li>    
+                        <li>UK</li>
+                        <li>World</li>
+                        <li>Business</li>
+                        <li>Politics</li>
+                        <li>Tech</li>
+                        <li>Science</li>
+                        <li>Health</li>    
+                        <li>Education</li>
+                        <li>Entertainments &#38; Arts</li>
+                        <li>Video &#38; Audio</li>
+                        <li>More</li>
+                    </ul>
+                </div>
+
+            </div>
+    </div>
+
+     <div id="forthbar">
+
+            <div class="fixedwidth">
+
+                <div id="menu3">
+                    <ul>
+                        <li>England</li>    
+                        <li>N.Ireland</li>
+                        <li>Scotland</li>
+                        <li>Alba</li>
+                        <li>Wales</li>
+                        <li>Cymru</li>
+                    </ul>
+                </div>
+
+            </div>
+
+                <div class="break"></div>
+        <div class="fixedwidth">
+
+            <div id="maincontent">
+
+            <div id="headline"><h1>California shootings 'act of terrorism'</h1></div>
+
+                <div id="section1">
+                <p>A mass shooting in San Bernardino, California, that left 14 people dead, is being investigated as an act of terrorism, the FBI says.</p>
+                
+                <div id="clock"><img src="image/clock.png"> <p>28 minutes ago</p></div>
+
+                <div class="uklink"><a href="http://www.w3schools.com/html/">UK</a></div>
+                </div>
+
+
+                <div id="section2"><img src="image/picture1.png">
+
+            
+                </div>
+            </div>
+                <div class="watchnow">Watch/Listen
+                    <div id="live">
+                        <ul>
+                            <li><img src="image/live.png"><p>BBC News Channel</p></li>
+                            <li><img src="image/audio.png"><p>BBC Radio 5 Live</p></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>   
+    </div>
+</body>
+</html>
