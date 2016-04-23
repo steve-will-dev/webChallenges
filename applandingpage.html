@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <style>
+
+/*@font-face {
+ font-family: 'conthrax';
+  src: url(fonts/conthrax.ttf);
+}*/
+
+#logo{
+  height: 50px;
+  width: 60px;
+  border-radius: 10px;
+  margin-top: -16px;
+  float: left;
+  margin-right: 10px;
+}
+#title{
+padding-left: 10px;
+}
+
+#topContainer{
+  background-image: url("images/sun.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#bottomContainer{
+  background-image: url("images/nh-pluto-charon-v2.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#middleContainer{
+  padding-bottom: 60px;
+
+}
+
+.h2div1{
+ color: white;
+ padding-top: 20px;
+}
+#list1{
+   color: white;
+    padding-top: 20px;
+}
+#topRow{
+  text-align: center;
+  margin-top: 100px;
+}
+.bold{
+  color: white;
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 1.5em;
+}
+#signUp{
+  margin-top: 10px;
+  margin-bottom: 50px;
+
+}
+
+.center {
+  text-align: center;
+}
+
+.h2div2{
+  margin-top: 150px;
+  margin-bottom: -80px;
+}
+h1.h2div2{
+  margin-top: 250px;
+
+}
+#page2colums{
+  margin-top: 130px;
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+    #page2colums {
+        margin-top: 50px;
+    }
+    .h2div2{
+      margin-bottom: 0;
+    }
+    h2.center.h2div2{
+      margin-top: 20px;
+    }
+}
+
+
+#page3colums{
+  margin-top: 60px;
+  text-align: center;
+
+}
+
+#appButtons{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+body{
+  font-family: conthrax; 
+
+  background-image: url("images/Pluto-Cresent11.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+  </style>
+  <body data-spy="scroll" data-target="#menucollapse1">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menucollapse1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img id="logo" alt="Our Solar System" src="images/OSS2.jpg">Our Solar System</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="menucollapse1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#topContainer">About <span class="sr-only">(current)</span></a></li>
+        <li><a href="#middleContainer">FAQ</a></li>
+        <li><a href="#bottomContainer">Get the App</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="email" placeholder="Email" class="form-control" />
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-success">Login</button>
+      </form>
+    </div>
+
+</nav>
+
+<div class="container contentContainer" id="topContainer">
+  <br />
+  <br />
+  
+  <div class="row">
+  <div class="col-md-6 col-md-offset-3" id="topRow">
+
+    <img src="images/title_image.png" width="100%" height="auto">
+    <h2 class="h2div1">Take a journey through our solar system with images a facts to excite and inspire any space enthusiast </h2>
+    <ul id="list1"><li>Our Solar System contain over 100 'cards' that feature scientific data, stories and beautiful images of the solar system.</li><li>Recieve the latest images directly form NASA</li>
+    <li>Learn something new everyday with the flashcard system</li></ul>
+
+    <p class="bold">Interested? Sign up to our mailing list!<p/>
+
+<form>
+  <div class="input-group">
+    <span class="input-group-addon" id="email address">@</span>
+    <input type="text" class="form-control" placeholder="yourname@example.com" aria-describedby="email address"></input>
+  </div>
+      <button type="submit" class="btn-lg btn-success" id="signUp">Sign Up</button>
+</form>
+
+  </div>
+
+</div>
+
+</div>
+
+<div class="container contentContainer" id="middleContainer">
+  <div class="row">
+    <h1 class="center h2div2">FAQ</h1>
+    <h2 class="center h2div2">Summary Text</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4" id="page2colums">
+      <h2><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Header</h2>
+      <p>Tsgfgfdext fdgfd fd fdg fdgfdtg reyhfsdgfd fsdgh dhsfgsdh dfg fsdgf sdhfsdfgsdh </p>
+      <button type="submit" class="btn btn-success">Login</button>
+    </div>
+
+    <div class="col-md-4" id="page2colums">
+      <h2><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Header</h2>
+      <p>Tsgfgfdext fdgfd fd fdg fdgfdtg reyhfsdgfd fsdgh dhsfgsdh dfg fsdgf sdhfsdfgsdh </p>
+      <button type="submit" class="btn btn-success">Login</button>
+    </div>
+
+    <div class="col-md-4" id="page2colums">
+      <h2><span class="glyphicon glyphicon-education" aria-hidden="true"></span> Header</h2>
+      <p>Tsgfgfdext fdgfd fd fdg fdgfdtg reyhfsdgfd fsdgh dhsfgsdh dfg fsdgf sdhfsdfgsdh </p>
+      <button type="submit" class="btn btn-success">Login</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="container contentContainer" id="bottomContainer">
+  <div class="row">
+
+    <h1 class="center h2div2">Download The App</h1>
+    <h2 class="center h2div2">For iOS and Andriod</h2>
+    <div class="col-md-6 col-md-offset-3 center">
+      <p>Free from the App sore and Google Play</p>
+    </div>
+        <div id="appButtons">
+       <div class="col-md-6" id="page2colums">
+      <a href="https://itunes.apple.com/gb/developer/concentric-sky/id298834205"><img src="images/apple.png"width="50%" height="auto"/>
+    </div>
+       <div class="col-md-6" id="page2colums">
+      <a href="https://play.google.com/store/apps/details?id=de.toar.livewallpaper.spacelive.free&hl=en_GB"><img src="images/googleplay.png"width="50%" height="auto"/>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(".contentContainer").css("min-height",$(window).height());
+    </script>
+  </body>
+</html>
